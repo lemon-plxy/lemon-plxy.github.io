@@ -151,6 +151,78 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-113" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/03/113/">113</a>
+    </h1>
+  
+
+        
+        <a href="/2019/11/03/113/" class="archive-article-date">
+  	<time datetime="2019-11-03T09:28:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>JSP和Servlet区别</p>
+<p>相同点：1.处理后台逻辑控制，作为mvc控制<br>             2.都有9个内置对象（request, response，session,applicationpage,out,config,pagecontext,exception)<br>作用域page &lt;  request, response  &lt; session &lt; application<br>         (一个页面&lt; 多个页面 &lt;  几个会话 &lt; 一个应用）</p>
+<p>写法：<br>page.setAttribute（“username”“sam”)<br>String id=page.getAttribute(“username”)</p>
+<p>request.setAttribute（“username”“sam”)<br>String id=request.getAttribute(“username”)</p>
+<p>不同点：</p>
+<ol>
+<li>JSP可以作为前端显示页面    servlet只能后台控制</li>
+<li>JSP可内嵌html，EL，jstl和java，而servlet只能有java</li>
+<li>JSP控制项目中不需要注册，servlet必须注册（1.web.xml   2.注解）<br>4 .JSP常用于小型项目，servlet用于框架类大型项目(Spring ,SpringMVC(Struts2.0),MyBatis)<pre><code>(SSM)</code></pre></li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/03/113/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-13" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
