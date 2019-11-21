@@ -164,14 +164,16 @@
 
         
         <a href="/2019/11/21/1121/" class="archive-article-date">
-  	<time datetime="2019-11-21T12:13:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-21</time>
+  	<time datetime="2019-11-21T12:27:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#jsp<br>//登录成功<br>response.sendRedirect(“/success.jsp”);</p>
+        <p>#JSP登录<br>1.表单提交数据到Servlet的方式<br>整体流程：登录页面提交form表单(get或post方式到action指定的位置)的数据到一个Servlet，在其内进行判定是否登录。<br>(1)Servlet中的doPost()方法：<br>    A.用Request.getParameter(“[input标签的name属性名]”)方法获取登录页面提交过来的表单数据。<br>    B.通过sql的JDBC的Jar包导入，进行数据库连接(连接代码见以往的连接代码)，用sql(类似于select * from user where id =’’, pwd=’’;)查询语句。<br>    C.比对判定以上两项的数据，页面跳转(“转发”和”重定向”两种方式取其一)。<br>(2)跳转到的页面：登录成功页面(在Session中保存用户信息)/不跳转</p>
+<p>2.表单提交数据到JSP的方式<br>整体流程：登录页面提交form表单(get或post方式到action指定的位置)的数据到一个JSP，在其内进行判定是否登录。<br>(1)JSP中的&lt;% %&gt;脚本内容：<br>    A.用Request.getParameter(“[input标签的name属性名]”)方法获取登录页面提交过来的表单数据。<br>    B.通过sql的JDBC的Jar包导入，进行数据库连接(连接代码见以往的连接代码)，用sql(类似于select * from user where id =’’, pwd=’’;)查询语句。<br>    C.比对判定以上两项的数据，页面跳转(“转发”和”重定向”两种方式取其一)。<br>(2)跳转到的页面：登录成功页面(在Session中保存用户信息)/重定向到登录JSP页面，为地址栏添加一个属性(response.sendRedirect(“index.jsp?info=”登录失败”))</p>
+<p>#//登录成功<br>response.sendRedirect(“/success.jsp”);</p>
 <p>&lt;%@ page language=”java” contentType=”text/html; charset=UTF-8” pageEncoding=”UTF-8”%&gt;<br><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"></p>
 <html>
 <head>
